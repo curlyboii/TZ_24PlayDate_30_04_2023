@@ -61,4 +61,19 @@ public class PlayerController : MonoBehaviour
     }
     #endregion
 
+
+    #region Restart
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Obstacle")
+        {
+
+            GameManager.instance.Restart();
+
+        }
+
+    }
+    #endregion
+
+
 }

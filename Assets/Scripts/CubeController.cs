@@ -12,6 +12,7 @@ public class CubeController : MonoBehaviour
     #region Variables
     [SerializeField] private PlayerStackCube stackController; // private reference to a PlayerStackCube script which is used to manage the stack of cubes
     private bool isStack = false; // field which is used to indicate whether the cube is currently stacked on the tower or not
+ 
     #endregion
 
     private void Start()
@@ -31,6 +32,7 @@ public class CubeController : MonoBehaviour
             {
                 isStack = !isStack;
                 stackController.IncreaseNewBlock(gameObject);
+
             }
 
         }

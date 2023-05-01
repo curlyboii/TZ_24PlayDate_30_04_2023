@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
     }
+
+
     // Start is called before the first frame update
     void Start()
     {

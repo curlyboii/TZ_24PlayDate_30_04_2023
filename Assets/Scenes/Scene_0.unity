@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 0e49d512f30918d4ca01d643edfd1026, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.2707347, g: 0.9457203, b: 0.84285295, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -148,8 +148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stackController: {fileID: 0}
-  pickUpEffect: {fileID: 253324237633408118, guid: b6c0b1506426c6842aef80fad4e5bb5e,
-    type: 3}
 --- !u!65 &67280969
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -427,7 +425,7 @@ Camera:
   m_GameObject: {fileID: 330585543}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.93215656, g: 1, b: 0.56037736, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -1078,8 +1076,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stackController: {fileID: 0}
-  pickUpEffect: {fileID: 253324237633408118, guid: b6c0b1506426c6842aef80fad4e5bb5e,
-    type: 3}
 --- !u!65 &581225956
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1221,8 +1217,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stackController: {fileID: 0}
-  pickUpEffect: {fileID: 253324237633408118, guid: b6c0b1506426c6842aef80fad4e5bb5e,
-    type: 3}
 --- !u!65 &617038878
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1657,8 +1651,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stackController: {fileID: 0}
-  pickUpEffect: {fileID: 253324237633408118, guid: b6c0b1506426c6842aef80fad4e5bb5e,
-    type: 3}
 --- !u!65 &832434943
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1849,8 +1841,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stackController: {fileID: 0}
-  pickUpEffect: {fileID: 253324237633408118, guid: b6c0b1506426c6842aef80fad4e5bb5e,
-    type: 3}
 --- !u!65 &842378105
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2157,8 +2147,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stackController: {fileID: 0}
-  pickUpEffect: {fileID: 253324237633408118, guid: b6c0b1506426c6842aef80fad4e5bb5e,
-    type: 3}
 --- !u!65 &1024779207
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2300,8 +2288,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stackController: {fileID: 0}
-  pickUpEffect: {fileID: 253324237633408118, guid: b6c0b1506426c6842aef80fad4e5bb5e,
-    type: 3}
 --- !u!65 &1029023552
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2583,6 +2569,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockList:
   - {fileID: 1342352645}
+  pickUpEffect: {fileID: 253324237633408118, guid: b6c0b1506426c6842aef80fad4e5bb5e,
+    type: 3}
+  plusOneText: {fileID: 8826951187986414746, guid: e3f3042afd3e879458c1e9b8535296e0,
+    type: 3}
 --- !u!65 &1342352649
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3094,8 +3084,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stackController: {fileID: 0}
-  pickUpEffect: {fileID: 253324237633408118, guid: b6c0b1506426c6842aef80fad4e5bb5e,
-    type: 3}
 --- !u!65 &1481481936
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3978,8 +3966,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stackController: {fileID: 0}
-  pickUpEffect: {fileID: 253324237633408118, guid: b6c0b1506426c6842aef80fad4e5bb5e,
-    type: 3}
 --- !u!65 &2087778665
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -13,7 +13,8 @@ public class PlayerStackCube : MonoBehaviour
 
     public List<GameObject> blockList = new List<GameObject>(); // stores all the cube objects that are stacked up by the player
     private GameObject lastBlockObject; // private GameObject field which stores the reference to the last block that was placed
-       public GameObject pickUpEffect; // Pickup effect
+    public GameObject pickUpEffect; // Pickup effect
+    public GameObject plusOneText; // Text +1
 
     private void Start()
     {
@@ -28,6 +29,8 @@ public class PlayerStackCube : MonoBehaviour
         _gameObject.transform.SetParent(transform); // The _gameObject is set to be a child of the script's transform, which makes it move along with the script's transform
         blockList.Add(_gameObject); // The _gameObject is added to the blockList
         Instantiate(pickUpEffect, transform.position, pickUpEffect.transform.rotation); // spawn effect
+        GameObject text = Instantiate(plusOneText, new Vector3(transform.position.x + 2f, transform.position.y + 2f, transform.position.z), plusOneText.transform.rotation); // spawn text
+        Destroy(text, 1f); // destroy text
         UpdateLastBlockObject(); // The UpdateLastBlockObject method is called to update the lastBlockObject field.
     }
 

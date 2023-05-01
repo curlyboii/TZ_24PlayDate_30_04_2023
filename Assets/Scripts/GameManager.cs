@@ -31,6 +31,13 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
+        Invoke("DelayRestart", 1f);
+    }
+
+    void DelayRestart()
+    {
+
         SceneManager.LoadScene(0);
+
     }
 }

@@ -15,10 +15,13 @@ public class PlayerStackCube : MonoBehaviour
     private GameObject lastBlockObject; // private GameObject field which stores the reference to the last block that was placed
     public GameObject pickUpEffect; // Pickup effect
     public GameObject plusOneText; // Text +1
+    public GameObject player; // to get player animator
+    Animator animator;
 
     private void Start()
     {
         UpdateLastBlockObject(); // UpdateLastBlockObject method is called once to initialize the lastBlockObject field
+        animator = player.GetComponent<Animator>(); // player animation
     }
 
     public void IncreaseNewBlock(GameObject _gameObject) // IncreaseNewBlock which takes a GameObject parameter _gameObject.
@@ -27,6 +30,7 @@ public class PlayerStackCube : MonoBehaviour
         transform.position = new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z); // transform is updated to move it up by 2 units on the y-axis
         _gameObject.transform.position = new Vector3(transform.position.x, lastBlockObject.transform.position.y - 2f, transform.position.z); // The position of the _gameObject is updated to be 2 units below the position of the last block placed
         _gameObject.transform.SetParent(transform); // The _gameObject is set to be a child of the script's transform, which makes it move along with the script's transform
+        animator.SetTrigger("Jump"); // play jump
         blockList.Add(_gameObject); // The _gameObject is added to the blockList
         Instantiate(pickUpEffect, transform.position, pickUpEffect.transform.rotation); // spawn effect
         GameObject text = Instantiate(plusOneText, new Vector3(transform.position.x + 2f, transform.position.y + 2f, transform.position.z), plusOneText.transform.rotation); // spawn text

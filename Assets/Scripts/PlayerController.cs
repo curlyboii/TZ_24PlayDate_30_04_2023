@@ -13,9 +13,6 @@ public class PlayerController : MonoBehaviour
 
     private float horizontalValue; // Horizontal variable
     private float newPositionX; // X position variable (variable to save X diraction and limit)
-
-    bool firstInput = true;
-
     #endregion
 
 

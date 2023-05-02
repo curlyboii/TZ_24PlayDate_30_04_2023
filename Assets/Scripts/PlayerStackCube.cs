@@ -34,7 +34,7 @@ public class PlayerStackCube : MonoBehaviour
         blockList.Add(_gameObject); // The _gameObject is added to the blockList
         Instantiate(pickUpEffect, transform.position, pickUpEffect.transform.rotation); // spawn effect
         GameObject text = Instantiate(plusOneText, new Vector3(transform.position.x + 2f, transform.position.y + 2f, transform.position.z), plusOneText.transform.rotation); // spawn text
-        Destroy(text, 1f); // destroy text
+       Destroy(text, 1f); // destroy text
         UpdateLastBlockObject(); // The UpdateLastBlockObject method is called to update the lastBlockObject field.
     }
 

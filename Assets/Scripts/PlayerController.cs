@@ -14,15 +14,21 @@ public class PlayerController : MonoBehaviour
     private float horizontalValue; // Horizontal variable
     private float newPositionX; // X position variable (variable to save X diraction and limit)
 
+    bool firstInput = true;
+
     #endregion
 
 
     // Update is called once per frame
     void Update()
     {
-        PlayerForwardMove();
-        HorizontalControl();
-        HorizontalMovementAndLimit();
+        if (GameManager.instance.gameStarted)
+        {
+            PlayerForwardMove();
+            HorizontalControl();
+            HorizontalMovementAndLimit();
+        }
+        
     }
 
 

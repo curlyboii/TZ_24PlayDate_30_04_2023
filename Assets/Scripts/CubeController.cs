@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class CubeController : MonoBehaviour
 {
@@ -8,17 +9,18 @@ public class CubeController : MonoBehaviour
     /// this script manages the movement of a cube object in the game world, checking for trigger colliders and interacting with a PlayerStackCube script
     /// to add or remove the cube from the stack
     /// </summary>
-
+    
     #region Variables
     [SerializeField] private PlayerStackCube stackController; // private reference to a PlayerStackCube script which is used to manage the stack of cubes
     private bool isStack = false; // field which is used to indicate whether the cube is currently stacked on the tower or not
- 
+
     #endregion
 
     private void Start()
     {
         stackController = GameObject.FindObjectOfType<PlayerStackCube>(); // Here, the stackController field is initialized by finding an instance of the
                                                                           // PlayerStackCube script in the scene
+
     }
 
     #region Trigger collider
@@ -40,6 +42,8 @@ public class CubeController : MonoBehaviour
                                                 // then the *DecreaseBlock method* of the *stackController* script is called to remove the cube from the stack.
         {
             stackController.DecreaseBlock(gameObject);
+
+
         }
     }
     #endregion

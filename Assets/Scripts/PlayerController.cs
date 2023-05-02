@@ -67,8 +67,9 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "Obstacle")
         {
-
-            GameManager.instance.Restart();
+            forwardSpeed = 0;
+            dodgeSpeed = 0;
+            GameManager.instance.GameOver();
 
         }
 

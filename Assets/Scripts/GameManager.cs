@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance; // access the GameManager from anywhere
+    public GameObject gameOverPanel;
 
     private void Awake()
     {
@@ -16,20 +17,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
-    public void Restart()
+    public void GameOver()
     {
         Invoke("DelayRestart", 1f);
     }
@@ -37,7 +25,14 @@ public class GameManager : MonoBehaviour
     void DelayRestart()
     {
 
-        SceneManager.LoadScene(0);
+        gameOverPanel.SetActive(true);
 
     }
+
+   public void RestartButton()
+    {
+
+        SceneManager.LoadScene(0);
+
+    }    
 }
